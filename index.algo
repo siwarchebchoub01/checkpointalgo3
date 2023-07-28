@@ -1,0 +1,19 @@
+ALGORITHM 
+VAR
+    i,j,tmp:INTEGER;
+    tab: ARRAY_OF INTEGER[]
+
+    BEGIN 
+    FOR i FROM 1 TO tab.length-1 STEP 1  DO
+    tmp=tab[i];
+    j=i-1;
+    WHILE (j>=0 and tab[j]>tmp) DO
+        
+        tab[j+1]=tab[j];
+j=j-1;
+tab[j+1]=tmp; 
+    END_WHILE
+    
+    END_FOR
+    
+END
